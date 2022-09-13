@@ -1,0 +1,32 @@
+int A, B;
+
+string str1, str2, str3;   
+
+
+str1 = 'A is greater than B!' ;
+str2 = 'B is greater than A!' ;
+str3 = 'A and B are equal to each other!' ;
+
+A = Random(); 
+B = Random();  
+
+output('A=A B=B'); !Output values
+
+if (A > B) {  
+
+printf('%s', str1); 
+
+}
+
+else if (A < B) {
+
+printf ('%s', str2);
+
+}
+
+else {
+
+printf('%s', str3);
+
+} 
+
