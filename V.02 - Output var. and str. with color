@@ -1,14 +1,16 @@
-double a,b;
+int a,b;
+
 string str1, str2, str3, str4;
 
-!THIS SCRIPT TEACH US HOW TO PRINT A MULTICOLORED STRING WITH VARIABLES
+a = 13;
+b = 2022;
 
-str1 = 'Bugün günlerden'; !String
-str2 = 'Eylül'; !String  
-str3 = 'Salı'; !String
-str4 = '!'; !String
+str1 = 'Bugün günlerden';
 
-a = 13 ; 
-b = 2022 ; 
+str2 = 'Eylül'; 
 
-printf(' \cl%s\ce %i\ch %s\cc %s\cp %d\ck%s ', str1, a, str2, str3, b, str4); !Print a multi-colored
+str3 = 'Salı'; 
+
+str4 = '!';
+
+printf(' \ce%s \ch%i \cl%s \ch%i \cp%s\cp%s', str1, a, str2, b, str3, str4); 
