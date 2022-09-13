@@ -1,0 +1,12 @@
+int i, A;
+string str1;
+
+str1 = 'Iteration num. ';
+
+A = 10;
+
+for (i = 1; i <= A; i = i + 1){
+    
+    printf('%s%i', str1, i);
+   
+}
