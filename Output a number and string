@@ -1,0 +1,12 @@
+double a;
+string str;
+
+!THIS SCRIPT TEACH US:
+!1. HOW TO GENERATE A RANDOM NUMBER BETWEEN AN INTERVAL
+!2. HOW TO ROUND A NUMBER
+!3. HOW TO PRINT A STRING IN THE OUTPUT WINDOW
+!4. HOW TO DISPLAY A VARIABLE IN THE OUTPUT WINDOW      
+
+a = Random(10,20); !Generate random number btw 10 & 20
+a = round(a); !Round a number
+
