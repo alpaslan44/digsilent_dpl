@@ -1,0 +1,35 @@
+int i, j, a, b, NmOfRow, NmOfCol;
+double var;
+int s;
+string str1, str2, str3;
+
+Matrix1.Init(1,1);
+
+
+a = 5;
+b = 10;
+
+str1 = 'Matrix1 have';
+str2 = 'rows, and';
+str3 = 'columns!';
+
+for (i = 1; i <= a; i += 1){
+      
+      for (j = 1; j <= b; j += 1){
+       
+       var = Random(1,10);
+       var = round(var);
+       Matrix1.Set(i,j, var); !Set a value from a matrice
+      
+      }
+
+}  
+
+    NmOfRow = Matrix1.NRow(); !Get the # of rows
+    NmOfCol = Matrix1.NCol(); !Get the # of columns
+     
+     
+    printf('%s %d %s %d %s', str1, NmOfRow, str2, NmOfCol, str3);
+    
+    
+    !To
