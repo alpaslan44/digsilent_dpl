@@ -1,0 +1,26 @@
+double i, var;
+
+Vector1.Init(1);  
+
+ClearOutput();
+
+for(i = 1 ; i <= 10; i += 1) {
+    
+   var = Random(5,20);
+   var = round(var);
+   Vector1.Set(i,var);
+}        
+
+
+
+!If you run the command without creating vector set, will not work
+!Apply the following:
+! 1. Click Contents button at the right side of window
+! 2. Click on New Object
+! 3. Select DPL Command and more
+! 4. Select Vector (IntVec) from selection options
+! 5. Save and Execute the script
+! 6. Too see your results -> 1. Click the script from script table
+! 7. Too see your results -> 2. Click Contents
+! 8. Too see your results -> 3. Click Vector1. 
+! You will see the results of vector groups.   
