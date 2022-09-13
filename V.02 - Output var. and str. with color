@@ -1,0 +1,14 @@
+double a,b;
+string str1, str2, str3, str4;
+
+!THIS SCRIPT TEACH US HOW TO PRINT A MULTICOLORED STRING WITH VARIABLES
+
+str1 = 'Bugün günlerden'; !String
+str2 = 'Eylül'; !String  
+str3 = 'Salı'; !String
+str4 = '!'; !String
+
+a = 13 ; 
+b = 2022 ; 
+
+printf(' \cl%s\ce %i\ch %s\cc %s\cp %d\ck%s ', str1, a, str2, str3, b, str4); !Print a multi-colored
