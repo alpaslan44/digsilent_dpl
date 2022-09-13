@@ -1,0 +1,16 @@
+double i, var;
+string str; 
+Vector1.Init(1);  
+
+ClearOutput();
+
+for (i = 1; i <= 10; i += 1){
+      
+     var = Random(1,10);
+     var = round(var);
+     
+     Vector1.Set(i,var);      
+}  
+
+Vector1.Sort(0); !Sort the vector ascending (0) Artan sıraya göre dizer/descending (1) azalan sıraya göre dizer
+
