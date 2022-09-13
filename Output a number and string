@@ -8,5 +8,16 @@ string str;
 !4. HOW TO DISPLAY A VARIABLE IN THE OUTPUT WINDOW      
 
 a = Random(10,20); !Generate random number btw 10 & 20
-a = round(a); !Round a number
+a = round(a); !Round a number   
 
+str = 'My name is Eren'; !a string
+
+printf('%s', str); !Print the string in output window
+
+output('a=a'); !Print a variable in output window (useful in debugging)
+
+                           
+                                                                        
+                                                                        
+                                                                        
+                                                                        
