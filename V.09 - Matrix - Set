@@ -32,4 +32,14 @@ for (i = 1; i <= a; i += 1){
     printf('%s %d %s %d %s', str1, NmOfRow, str2, NmOfCol, str3);
     
     
-    !To
+! If you run the command without creating matrix set, will not work
+! Apply the following:
+! 1. Click Contents button at the right side of window
+! 2. Click on New Object
+! 3. Select DPL Command and more
+! 4. Select Matrix (IntMat) from selection options
+! 5. Save and Execute the script
+! 6. Too see your results -> 1. Click the script from script table
+! 7. Too see your results -> 2. Click Contents
+! 8. Too see your results -> 3. Click Matrix1. 
+! You will see the results of Matrix. 
