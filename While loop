@@ -1,0 +1,23 @@
+double A;
+
+string str1, str2;
+
+ClearOutput();  !Clears the output window
+
+printf('%s\ce', 'Stay in the loop while A < 0.8 !');
+
+str1 = 'Still in while, because the value of A is: '; 
+str2 = 'Exit while loop because the value of A is: ';
+
+A = Random(); !Random number between 0 & 1
+
+while (A < 0.8) { !While loop
+      
+      printf('\cc%s %f', str1, A);
+      
+      A = Random();      
+}
+
+Warn ('%s %f', str2, A); !Warning message to the window
+   
+
