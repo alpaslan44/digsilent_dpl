@@ -1,0 +1,26 @@
+int i;
+double var;
+
+ClearOutput();
+
+EchoOff(); !Deactivates user interface. Very important in large loops
+           !It decreases a lot the computation time!
+           
+           
+!Run Ldf for 100 times
+
+for(i = 1; i <= 100; i += 1){
+
+  Ldf.Execute();
+  printf('%s %d', 'Load Flow: ', i); 
+} 
+
+
+!Do not forget to create Load Flow Calculation script!
+!Do the followings:
+!1. Go to "Contents"
+!2. Click "New Object"
+!3. Select "Load Flow Calculation (ComLdf)" from options
+!4. Click "Execute"
+!5. You can change the command name from "Contents" under "Name"
+!6. In this code, it is named as "Ldf" (Check bookmark)  
