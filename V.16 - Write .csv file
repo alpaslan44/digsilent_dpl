@@ -1,0 +1,23 @@
+int a, i;
+double var;
+string Name, Address; 
+
+!THIS SCRIPT TEACHES US:
+!1. OPEN A .CSV FILE FROM A PRESPECIFIED PATH
+!2. WRITE VALUES IN .CSV FILE
+
+
+ClearOutput(); 
+EchoOff();
+
+
+Address = 'C:\';
+Name = sprintf('%sTest.csv', Address);
+fopen(Name,'w',1); !Open the file for reading
+for(i = 1; i <= 10; i += 1){
+    var = Random(90,100);
+    var = round(var);
+    fprintf(1, '%f', var); !Write value in opened file
+}
+
+fclose(1); !Close the file
