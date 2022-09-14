@@ -1,0 +1,24 @@
+int a, i, error;
+double var;
+string str, Address, Name;   
+
+!THIS SCRIPT TEACH US HOW TO:
+!1. START MS EXCEL
+!2. OPEN A WORKBOOK FROM A PRESPECIFIED PATH
+!3. RETRIEVE THE VALUE FROM A CELL FROM .XLSX FILE
+!4. CLOSE THE WORKBOOK
+!5. TERMINATE THE MS SESION
+
+
+ClearOutput();
+EchoOff();
+
+xlStart(); !Start MS Excel
+xlOpenWorkbook('C:\Test.xlsx'); !Open .xlsx file 
+xlGetValue(2, 2, var); !Get value .xlsx (Row 2 Column 2)
+printf ('%s %d', 'The value of first cell from .xlsx file is:', var);
+
+xlCloseWorkbook();
+xlTerminate();
+
+ 
