@@ -1,0 +1,31 @@
+int a, i, error;
+double var;
+string str, Address, Name;   
+
+!THIS SCRIPT TEACH US HOW TO:
+!1. START MS EXCEL
+!2. OPEN A WORKBOOK
+!3. SET A VALUE SPECIFYING THE ROW AND COLUMNS
+!4. MAKE A TABLE HEAD 
+!5. SAVE THE WORKBOOK IN A PRESPECIFIED LOCATION
+!6. CLOSE THE WORKBOOK
+!7. TERMINATE THE MS SESION
+
+
+ClearOutput();
+EchoOff();
+
+xlStart(); !Start MS Excel
+
+xlNewWorkbook();
+xlSetValue(2,5,333); !Set value .xlsx
+  
+!Make a table head
+xlSetTextStyle(1,1,5,1, 1); !Bold
+xlSetFillColor(1,1,5,1, 500, 300, 150); !Yellow
+xlSetBorder(1,1,5,1,1,1,3,0,0,0); !Border at bottom
+!End Make a table head
+
+xlSaveWorkbookAs('C:\Users\alpas\Desktop\Test.xlsx'); !Save the workbook
+xlCloseWorkbook(); !Close Workbook
+xlTerminate(); !Terminate MS Excel file
