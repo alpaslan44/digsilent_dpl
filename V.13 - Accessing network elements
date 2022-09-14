@@ -1,0 +1,32 @@
+int i; 
+double var;
+string str;
+set GENs;       !Set
+object GEN;     !Object
+
+                !THIS SCRIPT TEACHES US HOW TO:
+                ! 1. DEFINE OBJECTS AND SET OF OBJECTS
+                ! 2. RETURN A SPECIFIC SET OF ELEMENTS(IN THIS EX, GENERATORS)
+                ! 3. ITERATE THROUGHOUT EACH OBJECT FROM THE SET
+                ! 4. FIND THE NULL NAME OF OBJECTS FROM A SET
+                ! 5. SORT THE OBJECTS ACCORDING TO THEIR NAME
+
+ClearOutput();                                      !Clear output window
+EchoOff();                                          !Deactivates the user interface
+
+GENs = AllRelevant('*ElmSym');                      !Returns a set with calculation relevant
+
+for (GEN = GENs.First(); GEN; GEN = GENs.Next()) {
+      
+      str = GEN.GetFullName();                       !Get the full name of element
+      printf('%s', str);                             !Print the full name of element
+      
+     }
+     
+Warn ('Elements will be sorted according to their name!');
+GENs.SortToName(0);
+
+for (GEN = GENs.First(); GEN; GEN = GENs.Next()){
+      str = GEN.GetFullName();
+      printf('%s', str);
+}
