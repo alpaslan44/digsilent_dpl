@@ -1,0 +1,24 @@
+!Use a generic remote script to randomly take out of service some loads
+!in the network and to run Load Flow a certain # of times (1000)
+!if Load Flow is divergent, exit subscript
+
+!The main script will send to the remote script an input
+!variable (# of iterations) and the remote script will send
+!back an output variable (current iteration) 
+
+
+
+double Input, Output, i;
+
+!THIS SCRIPT TEACHES US HOW TO:
+!1. CONFIGURE AND USE GENERIC REMOTE SCRIPTS
+!2. EXECUTE REMOTE SCRIPTS
+!3. EXIT A SCRIPT USIND DPL COMMAND
+
+Input = 1000; !# of iterations
+
+LoadFlowSubscript.Execute(Input,Output); !Execute loadflow
+
+i = Output;
+
+printf('%s %d', 'Load Flow become divergent at iteration', i);
