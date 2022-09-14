@@ -15,10 +15,9 @@ EchoOff();
 ClearOutput();
 
 !Run Ldf for 1000 times
-
 for (i = 1; i <= Input; i += 1){
 !Modify variable from element -  Make random out of service lines
-    for (LOAD = LOADs.First(); LOAD; LOADs.Next()){
+    for (LOAD = LOADs.First(); LOAD; LOAD = LOADs.Next()){
     
         a = Random();
         
