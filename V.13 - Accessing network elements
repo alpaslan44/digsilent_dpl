@@ -14,7 +14,7 @@ object GEN;     !Object
 ClearOutput();                                      !Clear output window
 EchoOff();                                          !Deactivates the user interface
 
-GENs = AllRelevant('*ElmSym');                      !Returns a set with calculation relevant
+GENs = AllRelevant('*.ElmSym');                      !Returns a set with calculation relevant
 
 for (GEN = GENs.First(); GEN; GEN = GENs.Next()) {
       
