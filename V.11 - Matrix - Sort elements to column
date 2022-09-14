@@ -1,0 +1,24 @@
+int i, j, a, b;
+double var;
+
+Matrix1.Init(1,1);
+
+ClearOutput();
+
+a = 10;
+b = 4;
+  
+for (i = 1; i <= a; i += 1){
+  
+     for(j = 1; j <= b; j += 1){     
+         var = Random(1,20);
+         var = round(var);                  
+         Matrix1.Set(i, j, var);     
+     }
+
+}                    
+ 
+Matrix1.SortToColumn(b);
+
+
+
