@@ -1,0 +1,43 @@
+int i, a, error;
+double var;
+string str;
+set LOADs; !Set
+object LOAD; !Object
+
+
+!THIS SCRIPT RUNS LOAD FLOW 1000 TIMES, UNLESS IT IS DIVERGENT
+!WHEN DIVERGENT, SUBSCRIPT STOPS AND RETRIEVE THE CURRENT ITERATION TO
+!THE MAIN SCRIPT, WHICH IT PRINTS IT ON THE OUTPUT WINDOW
+
+LOADs = AllRelevant('*.ElmLod');
+
+EchoOff();
+ClearOutput();
+
+!Run Ldf for 1000 times
+
+for (i = 1; i <= Input; i += 1){
+!Modify variable from element -  Make random out of service lines
+    for (LOAD = LOADs.First(); LOAD; LOADs.Next()){
+    
+        a = Random();
+        
+        if (a < 0.15){
+            LOAD:outserv = 1;
+        }
+        
+        else{
+            LOAD:outserv = 0;           
+        }    
+    }
+!END Modify variable fake random out of service lines
+
+     error = Ldf.Execute(); !Execute Load Flow
+     if (error = 1){
+          
+          Output = i;
+          exit(); !Exit from the script
+     }
+
+}
+!END Rund Ldf for 1000 times
