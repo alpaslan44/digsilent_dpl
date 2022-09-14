@@ -1,0 +1,49 @@
+int a;
+double var;
+string str;
+set LOADs;
+object LOAD;
+
+
+!THIS SCRIPT TEACHES US HOW TO:
+!1. DEFINE OBJECTS AND SETS OF OBJECTS
+!2. RETURN A SPECIFIC SET OF OBJECTS(IN THIS EX, LOADS)
+!3. ACCESS A CERTAIN VARIABLE FROM AN OBJECT
+!4. MODIFY A CERTAIN VARIABLE OR CHARACTERISTIC OF AN OBJECT
+
+
+ClearOutput(); !Clear the output
+EchoOff();
+
+LOADs = AllRelevant('*.ElmLod'); !Returns a set with calculation relevant object
+
+!Get a variable from object
+
+for (LOAD = LOADs.First(); LOAD; LOAD = LOADs.Next()) {
+
+    var = LOAD:plini;
+    printf('%s %d %s','LOAD active power is: ', var,'[MW]');
+
+}
+
+!END Get a variable from object
+
+!Modify a variable from element - Make random out service lines  
+for (LOAD = LOADs.First(); LOAD; LOAD = LOADs.Next()){
+    
+    a = Random();
+    if (a < 0.5){
+      
+        LOAD:outserv = 1; !Make a load outservice
+    
+    } 
+    
+    else {
+        
+        LOAD:outserv = 0; !Make a load inservice
+    }
+} 
+!END Modify a variable from element - Make random out service lines 
+
+!YOU CAN GET THE VARIABLE NAMES FROM HOLD THE MOUSE ON PARTICULAR DATA
+!LIKE HOLD THE MOUSE ON ACTIVE POWER (plini), REACTIVE POWER (qlini)
