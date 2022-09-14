@@ -1,0 +1,24 @@
+int a, i;
+double var, NrRows;
+string str, Name, Address; 
+
+                                                               !THIS SCRIPT TEACHES US:
+                                                               !1. OPEN A .CSV FILE FROM A PRESPECIFIED PATH
+                                                               !2. ASSIGN FILDS IN FILE
+                                                               !3. PRINT THE VALUES IN THE OUTPUT WINDOW
+                                                               !4. CLOSE THE .CSV FILE
+
+NrRows = 5;
+ClearOutput(); 
+EchoOff();
+
+
+Address = 'C:\';
+Name = sprintf('%sTest.csv', Address);
+fopen(Name,'r',1);                                              !Open the file for reading
+for(i = 1; i <= NrRows; i += 1){
+    fscanf(1,'%d', var);                                        !Assigns fields in file and return numbers 
+    printf('%d%s %d', i, '-th value is:', var);
+}
+
+fclose(1); !Close the file
