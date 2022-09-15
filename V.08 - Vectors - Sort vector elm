@@ -1,16 +1,60 @@
-double i, var;
-string str; 
-Vector1.Init(1);  
+int err, i;
+double Loading_Line, max_loading;
+string Line_Name;
+object LINE, MAX;
+set LINEs;
 
 ClearOutput();
+EchoOff(); 
+  
+  
+err = Ldf.Execute();
 
-for (i = 1; i <= 10; i += 1){
-      
-     var = Random(1,10);
-     var = round(var);
-     
-     Vector1.Set(i,var);      
-}  
+if(err){
+    exit(); 
+    output('No lines found');
+}              
 
-Vector1.Sort(0); !Sort the vector ascending (0) Artan sıraya göre dizer/descending (1) azalan sıraya göre dizer
+
+LINEs = AllRelevant('*.ElmLne');
+
+
+!for (LINE = LINEs.First(); LINE; LINE=LINEs.Next()){
+    
+    !Loading_Line = LINE:c:loading;
+    !Line_Name = LINE:loc_name;
+    
+    !printf('\ch%s \ce%s \cc%d', Line_Name, 'Loading is:', Loading_Line);
+    
+!}
+
+MAX = LINEs.First();
+
+if (MAX){
+max_loading = MAX:c:loading;        
+}
+
+else {
+      output('No lines found in selection');
+      exit();
+}
+
+    LINE = LINEs.Next();
+
+while (LINE) {
+    
+    if (LINE:c:loading > max_loading){
+    
+    max_loading = LINE:c:loading;
+    MAX = LINE;
+    
+    }
+    LINE = LINEs.Next();
+} 
+    output('Max loading=max_loading for line');
+    MAX.ShowFullName();
+ 
+  
+
+
 
