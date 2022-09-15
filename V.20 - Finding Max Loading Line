@@ -1,0 +1,49 @@
+int err;
+double MAX;
+object LINE, MAXLOAD;
+set LINEs;
+
+ClearOutput();
+EchoOff(); 
+  
+  
+err = Ldf.Execute();
+
+if(error){
+    exit();
+}
+
+S = AllRelevant('*.ElmLne');
+printf('%s',S);
+
+
+
+OMax = S.First();
+
+if(OMax){
+    
+     Max = OMax:c:loading;   
+    
+}
+
+else {
+     output('No lines found');
+     exit();
+} 
+     
+     O = S.Next();
+     while(O){
+       
+        if(O:c:loading > Max){
+            
+            Max = O:c:loading;
+            OMax = O;
+        }
+        
+       O = S.Next();
+         
+       
+     }
+      output('max loading=max for line');    
+      OMax.ShowFullName();
+
